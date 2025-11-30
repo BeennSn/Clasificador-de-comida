@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.git
+.vscode
+.idea
+*.md
+logs/
+venv/
+.DS_Store
+food-101/
+*.pt
+*.pth
+*.pt.backup
+nutrition_cache.json

@@ -1,0 +1,22 @@
+{
+  "apple_pie": ["apple pie", "tarta de manzana", "pie"],
+  "baby_back_ribs": ["baby back ribs", "ribs", "costillas", "costillas bbq"],
+  "baklava": ["baklava", "baclava"],
+  "beef_carpaccio": ["beef carpaccio", "carpaccio"],
+  "beef_tartare": ["beef tartare", "steak tartare", "tartar de carne"],
+  "beet_salad": ["beet salad", "ensalada de remolacha", "beetroot salad"],
+  "beignets": ["beignets", "donut", "donuts", "rosquillas"],
+  "bibimbap": ["bibimbap", "korean rice bowl"],
+  "bread_pudding": ["bread pudding", "budín de pan"],
+  "breakfast_burrito": ["breakfast burrito", "burrito"],
+  "bruschetta": ["bruschetta", "pan tostado"],
+  "caesar_salad": ["caesar salad", "ensalada cesar", "ensalada césar"],
+  "cannoli": ["cannoli", "canoli"],
+  "caprese_salad": ["caprese salad", "ensalada caprese", "tomato mozzarella"],
+  "carrot_cake": ["carrot cake", "pastel de zanahoria", "torta de zanahoria"],
+  "ceviche": ["ceviche", "seviche", "cebiche"],
+  "cheesecake": ["cheesecake", "tarta de queso", "pastel de queso"],
+  "cheese_plate": ["cheese plate", "cheese board", "tabla de quesos"],
+  "chicken_curry": ["chicken curry", "pollo al curry", "curry de pollo"],
+  "chicken_quesadilla": ["chicken quesadilla", "quesadilla", "quesadilla de pollo"]
+}
