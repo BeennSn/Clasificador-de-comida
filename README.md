@@ -1,10 +1,7 @@
 ejecución con python:
 
 1.  **Clonar el repositorio:**
-    ```bash
-    git clone [https://github.com/BeennSn/Clasificador-de-comida.git](https://github.com/BeennSn/Clasificador-de-comida.git)
-    cd Clasificador-de-comida
-    ```
+   
 2. **Crear y activar entorno virtual:**
    ```bash
    python -m venv venv
