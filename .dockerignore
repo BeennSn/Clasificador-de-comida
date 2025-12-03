@@ -12,8 +12,6 @@ logs/
 venv/
 .DS_Store
 food-101/
-*.pt
-*.pth
-*.pt.backup
+
 nutrition_cache.json
 README.md

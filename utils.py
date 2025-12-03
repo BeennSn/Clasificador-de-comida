@@ -8,7 +8,7 @@ from torchvision import models, transforms
 from PIL import Image
 
 # Load class names (21-class mapping used in training)
-CLASSES_PATH = os.path.join("food-101", "meta", "classes.txt")
+CLASSES_PATH = os.path.join("meta", "classes.txt")
 
 def _load_classes(path: str = CLASSES_PATH) -> List[str]:
     with open(path, "r", encoding="utf-8") as f:
@@ -35,7 +35,7 @@ def _build_model(device: torch.device, checkpoint_path: str):
     model = nn.Sequential(backbone, head)
 
     # Load checkpoint
-    state = torch.load(checkpoint_path, map_location=device)
+    state = torch.load(checkpoint_path, map_location=torch.device('cpu'))
 
     if isinstance(state, dict):
         if 'model_state_dict' in state:

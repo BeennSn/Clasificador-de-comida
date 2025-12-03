@@ -3,6 +3,7 @@ import json
 import uvicorn
 from contextlib import asynccontextmanager
 from typing import List
+from fastapi.middleware.cors import CORSMiddleware
 
 from fastapi import FastAPI, UploadFile, File, HTTPException
 
@@ -42,6 +43,13 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="Food Classifier + Nutrition API", lifespan=lifespan)
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Permite a cualquier página web conectarse
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def root():

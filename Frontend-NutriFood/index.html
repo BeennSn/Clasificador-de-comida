@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri-Food AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-text">
+            <h1>CLASIFICADOR NUTRICIONAL DE ALIMENTOS</h1>
+            <p>Plataforma de Reconocimiento de Alimentos y Análisis Nutricional Basada en Deep Learning</p>
+        </div>
+        <div class="header-badges">
+            <span class="badge">DenseNet201</span>
+            <span class="badge">Dataset Food-101</span>
+            <span class="badge">FastAPI</span>
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <section class="card left-card">
+            <h2>Clasificación de Imágenes</h2>
+            <p class="subtitle">Sube una foto para analizar</p>
+            
+            <div class="upload-area" id="drop-area">
+                <input type="file" id="fileElem" accept="image/*" onchange="handleFiles(this.files)">
+                <label class="upload-label" for="fileElem">
+                    <img id="preview-img" class="hidden" />
+                    <div id="placeholder">
+                        <i class="fa-solid fa-cloud-arrow-up icon-upload"></i>
+                        <p>Arrastra tu imagen aquí</p>
+                    </div>
+                </label>
+            </div>
+
+            <button class="btn-action" onclick="uploadImage()" id="btn-predict" disabled>Analizar Alimento</button>
+            
+            <div id="quick-result" class="hidden">
+                <h3 id="food-label">Comida</h3>
+                <div class="confidence-bar">
+                    <div id="conf-fill" style="width: 0%"></div>
+                </div>
+                <p id="conf-text">0%</p>
+            </div>
+        </section>
+
+        <section class="card right-card">
+            <div class="chat-header">
+                <div>
+                    <h2>Asistente Nutricional</h2>
+                    <p class="subtitle">Pregunta sobre los nutrientes (Ej: "¿Cuánta grasa tiene?")</p>
+                </div>
+            </div>
+
+            <div class="chat-history" id="chat-history">
+                <div class="message bot-msg">
+                    <div class="bubble">
+                        👋 Hola. Sube una imagen para comenzar. Una vez analizada, puedes preguntarme sobre sus calorías, proteínas o ingredientes.
+                    </div>
+                    <span class="timestamp">Ahora</span>
+                </div>
+            </div>
+
+             <div class="chat-input-area">
+                <button class="btn-clear" onclick="clearChat()" title="Limpiar Chat"><i class="fa-solid fa-trash"></i></button>
+                
+                <input type="text" id="user-input" placeholder="Escribe tu pregunta aquí..." onkeypress="handleEnter(event)">
+                <button class="btn-send" onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-col">
+            <h3>Información del Sistema</h3>
+            <ul>
+                <li>Modelo: DenseNet201 Fine-tuned</li>
+                <li>Dataset: Food-101 (101 clases)</li>
+                <li>Framework: PyTorch + FastAPI</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Fuente de Datos</h3>
+            <ul>
+                <li>API Nutricional: Open Food Facts</li>
+                <li>Proveedor: Base de Datos Colaborativa</li>
+                <li>Cobertura: 2M+ productos</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Acerca de</h3>
+            <ul>
+                <li>Reconocimiento de alimentos basado en Deep Learning</li>
+                <li>Análisis nutricional en tiempo real</li>
+                <li>Repositorio: NUTRITIONAL-FOOD</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
