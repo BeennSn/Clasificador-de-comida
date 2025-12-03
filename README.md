@@ -1,20 +1,31 @@
-Instalación:
+ejecución con python:
 
 1.  **Clonar el repositorio:**
     ```bash
     git clone [https://github.com/TU_USUARIO/mi-nutri-food.git](https://github.com/TU_USUARIO/mi-nutri-food.git)
     cd mi-nutri-food
     ```
-
-2.  **Instalar dependencias:**
+2. **Crear y activar entorno virtual:**
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate
+   ```
+3.  **Instalar dependencias:**
     ```bash
     pip install -r requirements.txt
     ```
 
-3.  **Ejecutar la aplicación:**
+4.  **Ejecutar la aplicación:**
     ```bash
     uvicorn app:app --reload
     ```
+ejecución con docker:
 
-4.  **Abrir en el navegador:**
-    Ve a la carpeta `Frontend-NutriFood` y abre el archivo `index.html`.
+1. **Construir la imagen:**
+    ```bash
+    docker build -t nutri-food-app .
+    ```
+2. **Ejecutar el contenedor:**
+    ```bash
+    docker run -d -p 8000:8000 --name mi-nutri-ia nutri-food-app
+    ```    
